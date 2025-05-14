@@ -1,44 +1,49 @@
-const form = document.getElementById(`contact-form`);
-const nameInput = form.name;
-const emailInput = form.email;
-const massageInput = form.massage;
-const successMsg = document.getElementById(`success-message`);
+// script.js
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-const nameError = document.getElementById(`name-error`);
-const emailError = document.getElementById(`email-error`);
-const messageError = document.getElementById(`message-error`);
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const message = document.getElementById("message");
 
-function valildateEmail(email) {
-    // simple regex for email validation
-    return /^[^\s@]+[^\s@]+\.[^\s@]+$/.test(email);
-}
+  const nameError = document.getElementById("name-error");
+  const emailError = document.getElementById("email-error");
+  const messageError = document.getElementById("message-error");
+  const successMessage = document.getElementById("success-massage");
 
-form.addEventListener ('submit', function (e) {
-    e.preventDefault();
-}) 
+  let valid = true;
 
-// reset eror
-nameError.textContent = '';
-emailError.textContent = '';
-messageError.textContent = '';
-successMsg.textContent = '';
+  // Reset error messages
+  nameError.textContent = "";
+  emailError.textContent = "";
+  messageError.textContent = "";
+  successMessage.textContent = "";
 
-let valid = true;
-
-if(nameInput.value.trim() === '') {
-    nameError.textContent = 'Please enter your name.';
+  // Name validation
+  if (name.value.trim() === "") {
+    nameError.textContent = "Nama wajib diisi.";
     valid = false;
-}
-if(!validateEmail(emailInput.value.trim())) {
-    emailError.textContent = 'Please enter a valid email address.';
+  }
+
+  // Email validation
+  if (email.value.trim() === "") {
+    emailError.textContent = "Email wajib diisi.";
     valid = false;
-}
-if(messageInput.value.trim() === '') {
-    messageError.textContent = 'Please enter your message.';
+  } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+    emailError.textContent = "Email tidak valid.";
     valid = false;
-}
-if (valid) {
-    // simulate sending message (no backend)
-    successMsg.textContent = 'Thank you! Your message has been sent.';
-    form.reset();
-}
+  }
+
+  // Message validation
+  if (message.value.trim() === "") {
+    messageError.textContent = "Pesan tidak boleh kosong.";
+    valid = false;
+  }
+
+  if (valid) {
+    successMessage.textContent = "Pesan berhasil dikirim!";
+    name.value = "";
+    email.value = "";
+    message.value = "";
+  }
+});
