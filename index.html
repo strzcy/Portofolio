@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav aria-label="Primary navigation">
+                <div class="logo" tabindex="0">MyPortfolio</div>
+                <ul>
+                    <li><a href="#about">Tentang</a></li>
+                    <li><a href="#skills">Skill</a></li>
+                    <li><a href="#projects">Projek</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<main class="container" tabindex="0">
+
+    <!-- About Section -->
+     <section id="about" class="about-me" aria-label="About Me section">
+        <h1>halo gaiss. saya <strong>Dessi Puspita Sari</strong> </h1>
+        <p>selamat datang di situs sweb Portfolio pribadi saya! saya adalah seorang <strong>Siswa di SMK plus pelita nusantara</strong> yang senang membuat aplikasi web menggunakan <strong>HTML, CSS, dan Javasript</strong></p>
+     </section>
+
+     <!-- Skills Section -->
+      <section id="skills"aria-label="Skills section">
+        <h2>skills</h2>
+        <div class="skills-list" role="list">
+            <span class="skill" role=""list>HTML5</span>
+            <span class="skill" role=""list>CSS3</span>
+            <span class="skill" role=""list>JavaScript</span>
+            <span class="skill" role=""list>Responsive Design</span>
+            <span class="skill" role=""list>Git & Github</span>
+            <span class="skill" role=""list>Boostrap</span>
+        </div>
+      </section>
+
+      <!-- project section -->
+       <section id="projects" aria-label="Projects section">
+        <h2>project</h2>
+        <div class="project-list">
+
+            <article class="project-item" tabindex="0">
+                <h3>Portfolio Website</h3>
+                <p>
+                    website pribadi yang menampilkan profil, keterampilan, dan proyek, dibangun menggunakan HTML, CSS, dan Javascript
+                </p>
+                <a href="website/aku.html" class="project-link" target="_blank" rel="noopener"> Lihat Project</a>
+            </article>
+
+            <article class="project-item" tabindex="0">
+                <h3>To-Do List App</h3>
+                <p>
+                    website pribadi yang menampilkan profil, keterampilan, dan proyek, dibangun menggunakan HTML, CSS, dan Javascript
+                </p>
+                <a href="todolist/index.html" class="project-link" target="_blank" rel="noopener"> Lihat Project</a>
+            </article>
+
+            <article class="project-item" tabindex="0">
+                <h3>Calculator</h3>
+                <p>
+                    website pribadi yang menampilkan profil, keterampilan, dan proyek, dibangun menggunakan HTML, CSS, dan Javascript
+                </p>
+                <a href="calculator/index.html" class="project-link" target="_blank" rel="noopener"> Lihat Project</a>
+            </article>
+
+            <article class="project-item" tabindex="0">
+                <h3>Game
+                <p>
+                    website pribadi yang menampilkan profil, keterampilan, dan proyek, dibangun menggunakan HTML, CSS, dan Javascript
+                </p>
+                <a href="game/game.html" class="project-link" target="_blank" rel="noopener"> Lihat Project</a>
+            </article>
+        </div>
+       </section>
+
+    <!-- contact section -->
+     <section id="contact" aria-label="Contact section">
+        <h2>Contact Me</h2>
+        <form id="contact-form" novalidate>
+
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Nama Anda" aria-label="Nama Anda" required>
+            <div class="error" id="name-error"></div>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email anda" aria-label="Email anda" required>
+            <div class="error" id="email-error"></div>
+
+            <label for="message">Message</label>
+            <textarea id="message" 
+           name="message" rows="4" placeholder="Tulis pesan anda..." aria-label="Pesan Anda" required></textarea>
+            <div class="error" id="message-error"></div>
+
+            <button type="submit" aria-label="Kirim pesan">kirim pesan</button>
+            <p class="success msg" id="success-massage" aria-live="polite"></p>
+        </form>
+     </section>
+</main>
+
+<!-- footer -->
+ <footer >
+    <a href="https://www.instagram.com/dddessi.sj/" target="_blank" class="instagram">Instagram</a> |
+    <a href="mailto:desipuspita46832@gmail.com" class="gmail">Gmail</a>
+
+    <p> &copy; 2025 Dessi Puspita Sari SMK PENUS</p>
+</footer>
+ 
+<script src="script.js"></script>
+</body>
+</html>

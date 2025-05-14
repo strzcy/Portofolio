@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var tanya = true
+
+while (tanya == 1){
+    var p= prompt('pilih: gajah, semut, orang');
+    var c= Math.random();
+
+    if (c< 0.34){
+        c="gajah";
+    } else if (c>= 0.34 && c<0.67){
+        c="orang";
+    } else {
+        c="semut";
+    }
+
+
+    var hasil ='';
+    if(p== c){
+        hasil = 'SERI';
+    } else if (p=='gajah'){
+
+    hasil =(c=='orang') ? 'MENANG' : 'KALAH';
+    } else if (p=='orang') {
+        hasil = (c=='gajah') ? 'KALAH' : 'MENANG'; 
+    } else if (p=='semut') {
+        hasil = (c=='orang') ? 'KALAH' : 'MENANG'; 
+    } else {
+        hasil = 'Anda memasukkan pilihan yang salah!!'
+    }
+
+    alert ('kamu memilih : '+p+ ' '+' dan komputer memilih : '+ c+'\n '+ hasil);
+
+    tanya = confirm ('lagi?');
+}
+
+alert ('Terimakasih Sudah Bermain')
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

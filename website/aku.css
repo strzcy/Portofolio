@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: pink;
+    color: rgb(41, 40, 40);
+    flex-direction: column;
+
+}
+h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+header {
+    background: salmon;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+
+.portfolio {
+    width: 90%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #888;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #ff7e5f;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.Skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.skiil {
+    background: #ffebda;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #0000001a;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.skkil {
+    background: #ffebda;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #0000001a;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+
+.skkil:hover {
+    transform: translatex(5px);
+    background: #ffcfab;
+}
+.skiil:hover {
+    transform: translateX(-5px);
+    background: #ffcfab;
+}
+
+.skil h3 {
+    font-size: 1.3em;
+    color: #ff7e5f;
+    margin-bottom: 10px;
+}
+
+.Pendidikan {
+    display: grid;
+    grid-template-columns: fr 1fr;
+    gap: 15px;
+    margin: 5px 0;
+    background: #ffebda;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #33333356;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.Pendidikan:hover {
+    transform: translateX(-5px);
+    background: #ffcfab;
+}
+
+
+.Pendidikans  :hover {
+
+    background: #ffcfab;
+}
+
+.Pendidikan a {
+    font-size: 1.1em;
+    color: #ff7e5f;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.skills {
+    margin: 30px 0;
+}
+
+.skills h2 {
+    font-size: 2em;
+    color: #ff7e5f;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+.skill span {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.Pendidikan h4 {
+    display: inline-block; /* Agar tidak memenuhi lebar penuh */
+    padding: 5px 0; /* Atur padding agar lebih rapi */
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.Pendidikan a {
+    display: inline; /* Pastikan tidak menjadi blok penuh */
+    text-decoration: none;
+    padding: 0;
+    background: none;
+}
+.Pendidikan a:hover {
+    background: none;
+    color: #ff7e5f;
+}
+
+
+.Pendidikan:hover h4 {
+    color: #ff7e5f; /* Warna berubah saat hover */
+    background: transparent; /* Hapus latar belakang */
+}
+
+
+.cta {
+    margin-top: 20px;
+}
+
+.cta a {
+    text-decoration: none;
+    background: #ff7e5f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta a:hover {
+    background: #feb47b;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+}
+
+footer .social-links {
+    margin: 10px 0;
+}
+
+footer .social-links a {
+    color: #ff7e5f;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+footer .social-links a::after {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+}
+
+
+
+footer .social-links a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+footer .social-links a:hover {
+    color: transparent;
+}
+
+footer .social-links a.instagram:hover::before {
+    content: '@dddessi.sj';
+    position: absolute;
+    text-align: right;
+    color: #feb47b;
+    font-weight: bold;
+}
+
+footer .social-links a.gmail:hover::before {
+    content: 'desipuspita46832@gmail.com';
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #feb47b;
+    font-weight: bold;
+}
+
+.me img {
+    height: 30%;
+    width: 30%;
+    border-radius: 100%;
+    align-items: center;
+    box-shadow: 0 4px 10px #ffababaf;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #ffebda;
+}
+
+@media (max-width: 600px) {
+    .Skills {
+        grid-template-columns: 1fr;
+    }
+}
